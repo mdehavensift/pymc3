@@ -33,5 +33,10 @@ benchmarks/html/
 benchmarks/results/
 .pytest_cache/
 
-# VSCode
-.vscode/
+\.mypy_cache/
+
+\.pyre/
+
+\.pyre_configuration
+
+mypy\.ini
