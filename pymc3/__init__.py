@@ -8,7 +8,7 @@ from . import gp
 from .math import logaddexp, logsumexp, logit, invlogit, expand_packed_triangular, probit, invprobit
 from .model import *
 from .model_graph import model_to_graphviz
-from .stats import *
+from .stats import *;
 from .sampling import *
 from .step_methods import *
 from .theanof import *
