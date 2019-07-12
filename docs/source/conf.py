@@ -42,6 +42,7 @@ extensions = [
     "IPython.sphinxext.ipython_console_highlighting",
     "sphinx.ext.autosectionlabel",
     "gallery_generator",
+    "sphinx.ext.napoleon",
 ]
 
 # Don't auto-generate summary for class members.
