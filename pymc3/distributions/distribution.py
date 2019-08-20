@@ -1,4 +1,5 @@
 import numbers
+import contextvars
 
 import numpy as np
 import theano.tensor as tt
@@ -19,6 +20,7 @@ from .shape_utils import (
 __all__ = ['DensityDist', 'Distribution', 'Continuous', 'Discrete',
            'NoDistribution', 'TensorType', 'draw_values', 'generate_samples']
 
+vectorized_ppc = contextvars.ContextVar('vectorized_ppc', default=None) # type: contextvars.ContextVar[Optional[Any]]
 
 class _Unpickling:
     pass
@@ -519,6 +521,10 @@ def draw_values(params, point=None, size=None):
     # Get fast drawable values (i.e. things in point or numbers, arrays,
     # constants or shares, or things that were already drawn in related
     # contexts)
+    maybe_sampler = vectorized_ppc.get(None)
+    if maybe_sampler:
+        # this is being done inside new, vectorized sample_posterior_predictive
+        return maybe_sampler.draw_values(params, point=point, size=size)
     if point is None:
         point = {}
     with _DrawValuesContext() as context:
