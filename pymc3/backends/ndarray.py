@@ -341,7 +341,7 @@ def _slice_as_ndarray(strace, idx):
 
     return sliced
 
-def point_list_to_multitrace(point_list: List[Dict[str, np.ndarray]], model: Optional[Model]) -> MultiTrace:
+def point_list_to_multitrace(point_list: List[Dict[str, np.ndarray]], model: Optional[Model]=None) -> MultiTrace:
     '''transform point list into MultiTrace'''
     _model = modelcontext(model)
     varnames = list(point_list[0].keys())
