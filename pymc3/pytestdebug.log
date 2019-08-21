@@ -1,0 +1,1265 @@
+versions pytest-5.0.1, py-1.8.0, python-3.7.4.final.0
+cwd=/Users/rpg/src/pymc3/pymc3
+args=['--debug', 'tests/test_sampling.py::TestSamplePPC::test_normal_scalar']
+
+  pytest_cmdline_main [hook]
+      config: <_pytest.config.Config object at 0x1050b4710>
+    pytest_plugin_registered [hook]
+        plugin: <Session pymc3 exitstatus='<UNSET>' testsfailed=0 testscollected=0>
+        manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+    finish pytest_plugin_registered --> [] [hook]
+    pytest_configure [hook]
+        config: <_pytest.config.Config object at 0x1050b4710>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x128777f10>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x128777e50>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: faulthandler [assertion]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.stepwise.StepwisePlugin object at 0x128778c10>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: py._io [assertion]
+    early skip of rewriting module: py._io.terminalwriter [assertion]
+    early skip of rewriting module: py._builtin [assertion]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x1050b4710>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/mark/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/main.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/runner.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/fixtures.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/helpconfig.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/python.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/terminal.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/debugging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/unittest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/capture.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/skipping.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/tmpdir.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/monkeypatch.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/recwarn.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/pastebin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.nose' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/nose.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/assertion/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/junitxml.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.resultlog' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/resultlog.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/doctest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/cacheprovider.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.freeze_support' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/freeze_support.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/setuponly.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/setupplan.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/stepwise.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/warnings.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/logging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/reports.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/faulthandler.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pytest_cov.plugin' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/pytest_cov/plugin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended'> err=<FDCapture 2 oldfd=6 _state='suspended'> in_=<FDCapture 0 oldfd=3 _state='started'> _state='suspended' _in_suspended='<UNSET>'> _current_item=None>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pymc3.tests.conftest' from '/Users/rpg/src/pymc3/pymc3/tests/conftest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x128777f10>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x128777e50>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.stepwise.StepwisePlugin object at 0x128778c10>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x128778210>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x1287781d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+    finish pytest_configure --> [] [hook]
+    pytest_sessionstart [hook]
+        session: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x1050b4710>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/mark/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/main.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/runner.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/fixtures.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/helpconfig.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/python.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/terminal.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/debugging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/unittest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/capture.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/skipping.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/tmpdir.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/monkeypatch.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/recwarn.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/pastebin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.nose' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/nose.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/assertion/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/junitxml.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.resultlog' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/resultlog.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/doctest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/cacheprovider.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.freeze_support' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/freeze_support.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/setuponly.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/setupplan.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/stepwise.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/warnings.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/logging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/reports.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/faulthandler.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pytest_cov.plugin' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/pytest_cov/plugin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended'> err=<FDCapture 2 oldfd=6 _state='suspended'> in_=<FDCapture 0 oldfd=3 _state='started'> _state='suspended' _in_suspended='<UNSET>'> _current_item=None>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'pymc3.tests.conftest' from '/Users/rpg/src/pymc3/pymc3/tests/conftest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x128777f10>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x128777e50>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.stepwise.StepwisePlugin object at 0x128778c10>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x128778210>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x1287781d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.fixtures.FixtureManager object at 0x12876a290>
+          manager: <_pytest.config.PytestPluginManager object at 0x104d2a7d0>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_report_header [hook]
+          config: <_pytest.config.Config object at 0x1050b4710>
+          startdir: /Users/rpg/src/pymc3/pymc3
+      finish pytest_report_header --> [['rootdir: /Users/rpg/src/pymc3, inifile: setup.cfg', 'plugins: cov-2.7.1'], ['using: pytest-5.0.1 pylib-1.8.0', 'setuptools registered plugins:', '  pytest-cov-2.7.1 at /Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/pytest_cov/plugin.py']] [hook]
+    finish pytest_sessionstart --> [] [hook]
+    pytest_collection [hook]
+        session: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+    perform_collect <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0> ['tests/test_sampling.py::TestSamplePPC::test_normal_scalar'] [collection]
+        pytest_collectstart [hook]
+            collector: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        finish pytest_collectstart --> [] [hook]
+        pytest_make_collect_report [hook]
+            collector: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        processing argument /Users/rpg/src/pymc3/pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar [collection]
+            pytest_ignore_collect [hook]
+                path: /Users/rpg/src/pymc3/pymc3/tests/__init__.py
+                config: <_pytest.config.Config object at 0x1050b4710>
+            finish pytest_ignore_collect --> False [hook]
+            pytest_collect_file [hook]
+                path: /Users/rpg/src/pymc3/pymc3/tests/__init__.py
+                parent: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              pytest_pycollect_makemodule [hook]
+                  path: /Users/rpg/src/pymc3/pymc3/tests/__init__.py
+                  parent: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              finish pytest_pycollect_makemodule --> <Package /Users/rpg/src/pymc3/pymc3/tests> [hook]
+            finish pytest_collect_file --> [<Package /Users/rpg/src/pymc3/pymc3/tests>] [hook]
+            pytest_ignore_collect [hook]
+                path: /Users/rpg/src/pymc3/pymc3/__init__.py
+                config: <_pytest.config.Config object at 0x1050b4710>
+            finish pytest_ignore_collect --> False [hook]
+            pytest_collect_file [hook]
+                path: /Users/rpg/src/pymc3/pymc3/__init__.py
+                parent: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              pytest_pycollect_makemodule [hook]
+                  path: /Users/rpg/src/pymc3/pymc3/__init__.py
+                  parent: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              finish pytest_pycollect_makemodule --> <Package /Users/rpg/src/pymc3/pymc3> [hook]
+            finish pytest_collect_file --> [<Package /Users/rpg/src/pymc3/pymc3>] [hook]
+            pytest_collect_file [hook]
+                path: /Users/rpg/src/pymc3/pymc3/tests/test_sampling.py
+                parent: <Package /Users/rpg/src/pymc3/pymc3/tests>
+              pytest_pycollect_makemodule [hook]
+                  path: /Users/rpg/src/pymc3/pymc3/tests/test_sampling.py
+                  parent: <Package /Users/rpg/src/pymc3/pymc3/tests>
+              finish pytest_pycollect_makemodule --> <Module test_sampling.py> [hook]
+            finish pytest_collect_file --> [<Module test_sampling.py>] [hook]
+          matchnodes [<Module test_sampling.py>] ['TestSamplePPC', 'test_normal_scalar'] [collection]
+              pytest_collectstart [hook]
+                  collector: <Module test_sampling.py>
+              finish pytest_collectstart --> [] [hook]
+              pytest_make_collect_report [hook]
+                  collector: <Module test_sampling.py>
+              find_module called for: pymc3.tests.test_sampling [assertion]
+              matched test file (was specified on cmdline): '/Users/rpg/src/pymc3/pymc3/tests/test_sampling.py' [assertion]
+              found cached rewritten pyc for '/Users/rpg/src/pymc3/pymc3/tests/test_sampling.py' [assertion]
+              early skip of rewriting module: unittest.mock [assertion]
+              early skip of rewriting module: pymc3.tests.models [assertion]
+              early skip of rewriting module: pymc3.tests.helpers [assertion]
+              early skip of rewriting module: logging.handlers [assertion]
+              early skip of rewriting module: queue [assertion]
+              early skip of rewriting module: _queue [assertion]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __name__
+                    obj: pymc3.tests.test_sampling
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __doc__
+                    obj: None
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __package__
+                    obj: pymc3.tests
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __loader__
+                    obj: <_pytest.assertion.rewrite.AssertionRewritingHook object at 0x1051b9f90>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __spec__
+                    obj: ModuleSpec(name='pymc3.tests.test_sampling', loader=<_pytest.assertion.rewrite.AssertionRewritingHook object at 0x1051b9f90>, origin='/Users/rpg/src/pymc3/pymc3/tests/test_sampling.py')
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __file__
+                    obj: /Users/rpg/src/pymc3/pymc3/tests/test_sampling.py
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __cached__
+                    obj: /Users/rpg/src/pymc3/pymc3/tests/__pycache__/test_sampling.cpython-37.pyc
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __builtins__
+                    obj: {'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, 'getattr': <built-in function getattr>, 'globals': <built-in function globals>, 'hasattr': <built-in function hasattr>, 'hash': <built-in function hash>, 'hex': <built-in function hex>, 'id': <built-in function id>, 'input': <built-in function input>, 'isinstance': <built-in function isinstance>, 'issubclass': <built-in function issubclass>, 'iter': <built-in function iter>, 'len': <built-in function len>, 'locals': <built-in function locals>, 'max': <built-in function max>, 'min': <built-in function min>, 'next': <built-in function next>, 'oct': <built-in function oct>, 'ord': <built-in function ord>, 'pow': <built-in function pow>, 'print': <built-in function print>, 'repr': <built-in function repr>, 'round': <built-in function round>, 'setattr': <built-in function setattr>, 'sorted': <built-in function sorted>, 'sum': <built-in function sum>, 'vars': <built-in function vars>, 'None': None, 'Ellipsis': Ellipsis, 'NotImplemented': NotImplemented, 'False': False, 'True': True, 'bool': <class 'bool'>, 'memoryview': <class 'memoryview'>, 'bytearray': <class 'bytearray'>, 'bytes': <class 'bytes'>, 'classmethod': <class 'classmethod'>, 'complex': <class 'complex'>, 'dict': <class 'dict'>, 'enumerate': <class 'enumerate'>, 'filter': <class 'filter'>, 'float': <class 'float'>, 'frozenset': <class 'frozenset'>, 'property': <class 'property'>, 'int': <class 'int'>, 'list': <class 'list'>, 'map': <class 'map'>, 'object': <class 'object'>, 'range': <class 'range'>, 'reversed': <class 'reversed'>, 'set': <class 'set'>, 'slice': <class 'slice'>, 'staticmethod': <class 'staticmethod'>, 'str': <class 'str'>, 'super': <class 'super'>, 'tuple': <class 'tuple'>, 'type': <class 'type'>, 'zip': <class 'zip'>, '__debug__': True, 'BaseException': <class 'BaseException'>, 'Exception': <class 'Exception'>, 'TypeError': <class 'TypeError'>, 'StopAsyncIteration': <class 'StopAsyncIteration'>, 'StopIteration': <class 'StopIteration'>, 'GeneratorExit': <class 'GeneratorExit'>, 'SystemExit': <class 'SystemExit'>, 'KeyboardInterrupt': <class 'KeyboardInterrupt'>, 'ImportError': <class 'ImportError'>, 'ModuleNotFoundError': <class 'ModuleNotFoundError'>, 'OSError': <class 'OSError'>, 'EnvironmentError': <class 'OSError'>, 'IOError': <class 'OSError'>, 'EOFError': <class 'EOFError'>, 'RuntimeError': <class 'RuntimeError'>, 'RecursionError': <class 'RecursionError'>, 'NotImplementedError': <class 'NotImplementedError'>, 'NameError': <class 'NameError'>, 'UnboundLocalError': <class 'UnboundLocalError'>, 'AttributeError': <class 'AttributeError'>, 'SyntaxError': <class 'SyntaxError'>, 'IndentationError': <class 'IndentationError'>, 'TabError': <class 'TabError'>, 'LookupError': <class 'LookupError'>, 'IndexError': <class 'IndexError'>, 'KeyError': <class 'KeyError'>, 'ValueError': <class 'ValueError'>, 'UnicodeError': <class 'UnicodeError'>, 'UnicodeEncodeError': <class 'UnicodeEncodeError'>, 'UnicodeDecodeError': <class 'UnicodeDecodeError'>, 'UnicodeTranslateError': <class 'UnicodeTranslateError'>, 'AssertionError': <class 'AssertionError'>, 'ArithmeticError': <class 'ArithmeticError'>, 'FloatingPointError': <class 'FloatingPointError'>, 'OverflowError': <class 'OverflowError'>, 'ZeroDivisionError': <class 'ZeroDivisionError'>, 'SystemError': <class 'SystemError'>, 'ReferenceError': <class 'ReferenceError'>, 'MemoryError': <class 'MemoryError'>, 'BufferError': <class 'BufferError'>, 'Warning': <class 'Warning'>, 'UserWarning': <class 'UserWarning'>, 'DeprecationWarning': <class 'DeprecationWarning'>, 'PendingDeprecationWarning': <class 'PendingDeprecationWarning'>, 'SyntaxWarning': <class 'SyntaxWarning'>, 'RuntimeWarning': <class 'RuntimeWarning'>, 'FutureWarning': <class 'FutureWarning'>, 'ImportWarning': <class 'ImportWarning'>, 'UnicodeWarning': <class 'UnicodeWarning'>, 'BytesWarning': <class 'BytesWarning'>, 'ResourceWarning': <class 'ResourceWarning'>, 'ConnectionError': <class 'ConnectionError'>, 'BlockingIOError': <class 'BlockingIOError'>, 'BrokenPipeError': <class 'BrokenPipeError'>, 'ChildProcessError': <class 'ChildProcessError'>, 'ConnectionAbortedError': <class 'ConnectionAbortedError'>, 'ConnectionRefusedError': <class 'ConnectionRefusedError'>, 'ConnectionResetError': <class 'ConnectionResetError'>, 'FileExistsError': <class 'FileExistsError'>, 'FileNotFoundError': <class 'FileNotFoundError'>, 'IsADirectoryError': <class 'IsADirectoryError'>, 'NotADirectoryError': <class 'NotADirectoryError'>, 'InterruptedError': <class 'InterruptedError'>, 'PermissionError': <class 'PermissionError'>, 'ProcessLookupError': <class 'ProcessLookupError'>, 'TimeoutError': <class 'TimeoutError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'exit': Use exit() or Ctrl-D (i.e. EOF) to exit, 'copyright': Copyright (c) 2001-2019 Python Software Foundation.
+All Rights Reserved.
+
+Copyright (c) 2000 BeOpen.com.
+All Rights Reserved.
+
+Copyright (c) 1995-2001 Corporation for National Research Initiatives.
+All Rights Reserved.
+
+Copyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam.
+All Rights Reserved., 'credits':     Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands
+    for supporting Python development.  See www.python.org for more information., 'license': See http://www.python.org/3.7/license.html, 'help': Type help() for interactive help, or help(object) for help about object.}
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: @py_builtins
+                    obj: <module 'builtins' (built-in)>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: @pytest_ar
+                    obj: <module '_pytest.assertion.rewrite' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/_pytest/assertion/rewrite.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: combinations
+                    obj: <class 'itertools.combinations'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: np
+                    obj: <module 'numpy' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/numpy/__init__.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: mock
+                    obj: <module 'unittest.mock' from '/usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/mock.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: npt
+                    obj: <module 'numpy.testing' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/numpy/testing/__init__.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: pm
+                    obj: <module 'pymc3' from '/Users/rpg/src/pymc3/pymc3/__init__.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: tt
+                    obj: <module 'theano.tensor' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/theano/tensor/__init__.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: shared
+                    obj: <function shared at 0x10bfeea70>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: theano
+                    obj: <module 'theano' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/theano/__init__.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: simple_init
+                    obj: <function simple_init at 0x1287dd680>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: SeededTest
+                    obj: <class 'pymc3.tests.helpers.SeededTest'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: IncorrectArgumentsError
+                    obj: <class 'pymc3.exceptions.IncorrectArgumentsError'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: stats
+                    obj: <module 'scipy.stats' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/scipy/stats/__init__.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: pytest
+                    obj: <module 'pytest' from '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/pytest.py'>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: TestSample
+                    obj: <class 'pymc3.tests.test_sampling.TestSample'>
+                finish pytest_pycollect_makeitem --> <Class TestSample> [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: test_empty_model
+                    obj: <function test_empty_model at 0x128789290>
+                  pytest_generate_tests [hook]
+                      metafunc: <_pytest.python.Metafunc object at 0x12880ee90>
+                  finish pytest_generate_tests --> [] [hook]
+                finish pytest_pycollect_makeitem --> [<Function test_empty_model>] [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: test_partial_trace_sample
+                    obj: <function test_partial_trace_sample at 0x1288198c0>
+                  pytest_generate_tests [hook]
+                      metafunc: <_pytest.python.Metafunc object at 0x128826110>
+                  finish pytest_generate_tests --> [] [hook]
+                finish pytest_pycollect_makeitem --> [<Function test_partial_trace_sample>] [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: TestNamedSampling
+                    obj: <class 'pymc3.tests.test_sampling.TestNamedSampling'>
+                finish pytest_pycollect_makeitem --> <Class TestNamedSampling> [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: TestChooseBackend
+                    obj: <class 'pymc3.tests.test_sampling.TestChooseBackend'>
+                finish pytest_pycollect_makeitem --> <Class TestChooseBackend> [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: TestSamplePPC
+                    obj: <class 'pymc3.tests.test_sampling.TestSamplePPC'>
+                finish pytest_pycollect_makeitem --> <Class TestSamplePPC> [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: TestSamplePPCW
+                    obj: <class 'pymc3.tests.test_sampling.TestSamplePPCW'>
+                finish pytest_pycollect_makeitem --> <Class TestSamplePPCW> [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: test_exec_nuts_init
+                    obj: <function test_exec_nuts_init at 0x128819950>
+                  pytest_generate_tests [hook]
+                      metafunc: <_pytest.python.Metafunc object at 0x128826710>
+                    pytest_make_parametrize_id [hook]
+                        config: <_pytest.config.Config object at 0x1050b4710>
+                        val: jitter+adapt_diag
+                        argname: method
+                    finish pytest_make_parametrize_id --> None [hook]
+                  early skip of rewriting module: encodings.unicode_escape [assertion]
+                    pytest_make_parametrize_id [hook]
+                        config: <_pytest.config.Config object at 0x1050b4710>
+                        val: adapt_diag
+                        argname: method
+                    finish pytest_make_parametrize_id --> None [hook]
+                    pytest_make_parametrize_id [hook]
+                        config: <_pytest.config.Config object at 0x1050b4710>
+                        val: advi
+                        argname: method
+                    finish pytest_make_parametrize_id --> None [hook]
+                    pytest_make_parametrize_id [hook]
+                        config: <_pytest.config.Config object at 0x1050b4710>
+                        val: ADVI+adapt_diag
+                        argname: method
+                    finish pytest_make_parametrize_id --> None [hook]
+                    pytest_make_parametrize_id [hook]
+                        config: <_pytest.config.Config object at 0x1050b4710>
+                        val: advi+adapt_diag_grad
+                        argname: method
+                    finish pytest_make_parametrize_id --> None [hook]
+                    pytest_make_parametrize_id [hook]
+                        config: <_pytest.config.Config object at 0x1050b4710>
+                        val: map
+                        argname: method
+                    finish pytest_make_parametrize_id --> None [hook]
+                    pytest_make_parametrize_id [hook]
+                        config: <_pytest.config.Config object at 0x1050b4710>
+                        val: advi_map
+                        argname: method
+                    finish pytest_make_parametrize_id --> None [hook]
+                    pytest_make_parametrize_id [hook]
+                        config: <_pytest.config.Config object at 0x1050b4710>
+                        val: nuts
+                        argname: method
+                    finish pytest_make_parametrize_id --> None [hook]
+                  finish pytest_generate_tests --> [] [hook]
+                finish pytest_pycollect_makeitem --> [<Function test_exec_nuts_init[jitter+adapt_diag]>, <Function test_exec_nuts_init[adapt_diag]>, <Function test_exec_nuts_init[advi]>, <Function test_exec_nuts_init[ADVI+adapt_diag]>, <Function test_exec_nuts_init[advi+adapt_diag_grad]>, <Function test_exec_nuts_init[map]>, <Function test_exec_nuts_init[advi_map]>, <Function test_exec_nuts_init[nuts]>] [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: TestSamplePriorPredictive
+                    obj: <class 'pymc3.tests.test_sampling.TestSamplePriorPredictive'>
+                finish pytest_pycollect_makeitem --> <Class TestSamplePriorPredictive> [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __repr__
+                    obj: <slot wrapper '__repr__' of 'module' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __getattribute__
+                    obj: <slot wrapper '__getattribute__' of 'module' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __setattr__
+                    obj: <slot wrapper '__setattr__' of 'module' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __delattr__
+                    obj: <slot wrapper '__delattr__' of 'module' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __init__
+                    obj: <slot wrapper '__init__' of 'module' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __new__
+                    obj: <built-in method __new__ of type object at 0x104363a30>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __dir__
+                    obj: <method '__dir__' of 'module' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __dict__
+                    obj: <member '__dict__' of 'module' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __hash__
+                    obj: <slot wrapper '__hash__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __str__
+                    obj: <slot wrapper '__str__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __lt__
+                    obj: <slot wrapper '__lt__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __le__
+                    obj: <slot wrapper '__le__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __eq__
+                    obj: <slot wrapper '__eq__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __ne__
+                    obj: <slot wrapper '__ne__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __gt__
+                    obj: <slot wrapper '__gt__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __ge__
+                    obj: <slot wrapper '__ge__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __reduce_ex__
+                    obj: <method '__reduce_ex__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __reduce__
+                    obj: <method '__reduce__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __subclasshook__
+                    obj: <method '__subclasshook__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __init_subclass__
+                    obj: <method '__init_subclass__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __format__
+                    obj: <method '__format__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __sizeof__
+                    obj: <method '__sizeof__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+                pytest_pycollect_makeitem [hook]
+                    collector: <Module test_sampling.py>
+                    name: __class__
+                    obj: <attribute '__class__' of 'object' objects>
+                finish pytest_pycollect_makeitem --> None [hook]
+              finish pytest_make_collect_report --> <CollectReport 'pymc3/tests/test_sampling.py' lenresult=16 outcome='passed'> [hook]
+            matchnodes [<Class TestSamplePPC>] ['test_normal_scalar'] [collection]
+                pytest_collectstart [hook]
+                    collector: <Class TestSamplePPC>
+                finish pytest_collectstart --> [] [hook]
+                pytest_make_collect_report [hook]
+                    collector: <Class TestSamplePPC>
+                finish pytest_make_collect_report --> <CollectReport 'pymc3/tests/test_sampling.py::TestSamplePPC' lenresult=1 outcome='passed'> [hook]
+              matchnodes [<Instance ()>] ['test_normal_scalar'] [collection]
+                  pytest_collectstart [hook]
+                      collector: <Instance ()>
+                  finish pytest_collectstart --> [] [hook]
+                  pytest_make_collect_report [hook]
+                      collector: <Instance ()>
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __module__
+                        obj: pymc3.tests.test_sampling
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_normal_scalar
+                        obj: <function TestSamplePPC.test_normal_scalar at 0x128819dd0>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x12884c4d0>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_normal_scalar>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_normal_vector
+                        obj: <function TestSamplePPC.test_normal_vector at 0x128819e60>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x12884c790>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_normal_vector>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_exceptions
+                        obj: <function TestSamplePPC.test_exceptions at 0x128819ef0>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x12884cb50>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_exceptions>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_vector_observed
+                        obj: <function TestSamplePPC.test_vector_observed at 0x128819f80>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x128856110>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_vector_observed>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_sum_normal
+                        obj: <function TestSamplePPC.test_sum_normal at 0x12881c050>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x128856290>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_sum_normal>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_model_not_drawable_prior
+                        obj: <function TestSamplePPC.test_model_not_drawable_prior at 0x12881c0e0>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x1288566d0>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_model_not_drawable_prior>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_model_shared_variable
+                        obj: <function TestSamplePPC.test_model_shared_variable at 0x12881c170>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x128856ad0>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_model_shared_variable>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_deterministic_of_observed
+                        obj: <function TestSamplePPC.test_deterministic_of_observed at 0x12881c200>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x12885c0d0>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_deterministic_of_observed>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: test_deterministic_of_observed_modified_interface
+                        obj: <function TestSamplePPC.test_deterministic_of_observed_modified_interface at 0x12881c290>
+                      pytest_generate_tests [hook]
+                          metafunc: <_pytest.python.Metafunc object at 0x12884c190>
+                      finish pytest_generate_tests --> [] [hook]
+                    finish pytest_pycollect_makeitem --> [<Function test_deterministic_of_observed_modified_interface>] [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __doc__
+                        obj: None
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: _Class__pytest_setup_class
+                        obj: <function Class._inject_setup_class_fixture.<locals>.xunit_setup_class_fixture at 0x128843cb0>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: _Class__pytest_setup_method
+                        obj: <function Class._inject_setup_method_fixture.<locals>.xunit_setup_method_fixture at 0x128843dd0>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: random_seed
+                        obj: 20160911
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: setup_class
+                        obj: <classmethod object at 0x1287fb910>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: setup_method
+                        obj: <function SeededTest.setup_method at 0x1287fd710>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: teardown_method
+                        obj: <function SeededTest.teardown_method at 0x1287fdb00>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __dict__
+                        obj: <attribute '__dict__' of 'SeededTest' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __weakref__
+                        obj: <attribute '__weakref__' of 'SeededTest' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __repr__
+                        obj: <slot wrapper '__repr__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __hash__
+                        obj: <slot wrapper '__hash__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __str__
+                        obj: <slot wrapper '__str__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __getattribute__
+                        obj: <slot wrapper '__getattribute__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __setattr__
+                        obj: <slot wrapper '__setattr__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __delattr__
+                        obj: <slot wrapper '__delattr__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __lt__
+                        obj: <slot wrapper '__lt__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __le__
+                        obj: <slot wrapper '__le__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __eq__
+                        obj: <slot wrapper '__eq__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __ne__
+                        obj: <slot wrapper '__ne__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __gt__
+                        obj: <slot wrapper '__gt__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __ge__
+                        obj: <slot wrapper '__ge__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __init__
+                        obj: <slot wrapper '__init__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __new__
+                        obj: <built-in method __new__ of type object at 0x104367c80>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __reduce_ex__
+                        obj: <method '__reduce_ex__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __reduce__
+                        obj: <method '__reduce__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __subclasshook__
+                        obj: <method '__subclasshook__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __init_subclass__
+                        obj: <method '__init_subclass__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __format__
+                        obj: <method '__format__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __sizeof__
+                        obj: <method '__sizeof__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __dir__
+                        obj: <method '__dir__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                    pytest_pycollect_makeitem [hook]
+                        collector: <Instance ()>
+                        name: __class__
+                        obj: <attribute '__class__' of 'object' objects>
+                    finish pytest_pycollect_makeitem --> None [hook]
+                  finish pytest_make_collect_report --> <CollectReport 'pymc3/tests/test_sampling.py::TestSamplePPC' lenresult=9 outcome='passed'> [hook]
+                matchnodes [<Function test_normal_scalar>] [] [collection]
+                  matchnodes finished ->  1 nodes [collection]
+                matchnodes finished ->  1 nodes [collection]
+              matchnodes finished ->  1 nodes [collection]
+            matchnodes finished ->  1 nodes [collection]
+        finish pytest_make_collect_report --> <CollectReport '' lenresult=1 outcome='passed'> [hook]
+        pytest_collectreport [hook]
+            report: <CollectReport '' lenresult=1 outcome='passed'>
+        finish pytest_collectreport --> [] [hook]
+    genitems <Function test_normal_scalar> [collection]
+      pytest_itemcollected [hook]
+          item: <Function test_normal_scalar>
+      finish pytest_itemcollected --> [] [hook]
+      pytest_collection_modifyitems [hook]
+          session: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          config: <_pytest.config.Config object at 0x1050b4710>
+          items: [<Function test_normal_scalar>]
+      finish pytest_collection_modifyitems --> [] [hook]
+      pytest_collection_finish [hook]
+          session: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        pytest_report_collectionfinish [hook]
+            config: <_pytest.config.Config object at 0x1050b4710>
+            startdir: /Users/rpg/src/pymc3/pymc3
+            items: [<Function test_normal_scalar>]
+        finish pytest_report_collectionfinish --> [] [hook]
+      finish pytest_collection_finish --> [] [hook]
+      pytest_warning_captured [hook]
+          warning_message: {message : DeprecationWarning("'U' mode is deprecated"), category : 'DeprecationWarning', filename : '/Users/rpg/.virtualenvs/pymc3/bin/../lib/python3.7/site.py', lineno : 429, line : None}
+          when: collect
+          item: None
+      finish pytest_warning_captured --> [] [hook]
+      pytest_warning_captured [hook]
+          warning_message: {message : DeprecationWarning("'U' mode is deprecated"), category : 'DeprecationWarning', filename : '/Users/rpg/.virtualenvs/pymc3/bin/../lib/python3.7/site.py', lineno : 429, line : None}
+          when: collect
+          item: None
+      finish pytest_warning_captured --> [] [hook]
+      pytest_warning_captured [hook]
+          warning_message: {message : DeprecationWarning("'U' mode is deprecated"), category : 'DeprecationWarning', filename : '/Users/rpg/.virtualenvs/pymc3/bin/../lib/python3.7/site.py', lineno : 429, line : None}
+          when: collect
+          item: None
+      finish pytest_warning_captured --> [] [hook]
+      pytest_warning_captured [hook]
+          warning_message: {message : DeprecationWarning("'U' mode is deprecated"), category : 'DeprecationWarning', filename : '/Users/rpg/.virtualenvs/pymc3/bin/../lib/python3.7/site.py', lineno : 429, line : None}
+          when: collect
+          item: None
+      finish pytest_warning_captured --> [] [hook]
+      pytest_warning_captured [hook]
+          warning_message: {message : DeprecationWarning("'U' mode is deprecated"), category : 'DeprecationWarning', filename : '/Users/rpg/.virtualenvs/pymc3/bin/../lib/python3.7/site.py', lineno : 429, line : None}
+          when: collect
+          item: None
+      finish pytest_warning_captured --> [] [hook]
+      pytest_warning_captured [hook]
+          warning_message: {message : DeprecationWarning("'U' mode is deprecated"), category : 'DeprecationWarning', filename : '/Users/rpg/.virtualenvs/pymc3/bin/../lib/python3.7/site.py', lineno : 429, line : None}
+          when: collect
+          item: None
+      finish pytest_warning_captured --> [] [hook]
+    finish pytest_collection --> [<Function test_normal_scalar>] [hook]
+    pytest_runtestloop [hook]
+        session: <Session pymc3 exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=1>
+      pytest_runtest_protocol [hook]
+          item: <Function test_normal_scalar>
+          nextitem: None
+        pytest_runtest_logstart [hook]
+            nodeid: pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar
+            location: ('pymc3/tests/test_sampling.py', 242, 'TestSamplePPC.test_normal_scalar')
+        early skip of rewriting module: py._io.capture [assertion]
+        finish pytest_runtest_logstart --> [] [hook]
+        pytest_runtest_setup [hook]
+            item: <Function test_normal_scalar>
+          pytest_fixture_setup [hook]
+              fixturedef: <FixtureDef argname='_Class__pytest_setup_class' scope='class' baseid='pymc3/tests/test_sampling.py::TestSamplePPC'>
+              request: <SubRequest '_Class__pytest_setup_class' for <Function test_normal_scalar>>
+          finish pytest_fixture_setup --> None [hook]
+          pytest_fixture_setup [hook]
+              fixturedef: <FixtureDef argname='exception_verbosity' scope='function' baseid='pymc3/tests'>
+              request: <SubRequest 'exception_verbosity' for <Function test_normal_scalar>>
+          finish pytest_fixture_setup --> None [hook]
+          pytest_fixture_setup [hook]
+              fixturedef: <FixtureDef argname='theano_config' scope='function' baseid='pymc3/tests'>
+              request: <SubRequest 'theano_config' for <Function test_normal_scalar>>
+          finish pytest_fixture_setup --> None [hook]
+          pytest_fixture_setup [hook]
+              fixturedef: <FixtureDef argname='_Class__pytest_setup_method' scope='function' baseid='pymc3/tests/test_sampling.py::TestSamplePPC'>
+              request: <SubRequest '_Class__pytest_setup_method' for <Function test_normal_scalar>>
+          finish pytest_fixture_setup --> None [hook]
+        finish pytest_runtest_setup --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_normal_scalar>
+            call: <CallInfo when='setup' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='setup' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='setup' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='setup' outcome='passed'>
+              config: <_pytest.config.Config object at 0x1050b4710>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_call [hook]
+            item: <Function test_normal_scalar>
+          pytest_pyfunc_call [hook]
+              pyfuncitem: <Function test_normal_scalar>
+          early skip of rewriting module: tmpugu6evk8 [assertion]
+          early skip of rewriting module: tmpugu6evk8.m54e1ce4760689129b813fce15fee7f8d468afbe167bc036205eea6bd301309d7 [assertion]
+          early skip of rewriting module: theano.gof.cutils [assertion]
+          early skip of rewriting module: cutils_ext [assertion]
+          early skip of rewriting module: cutils_ext.cutils_ext [assertion]
+          early skip of rewriting module: tmpiqhmlj14 [assertion]
+          early skip of rewriting module: tmpiqhmlj14.mb66b5942e7cf047b546a9aa8995aaacfa70e1bd735cd0b2f02691cb3437be94b [assertion]
+          early skip of rewriting module: tmpk3qfyqfs [assertion]
+          early skip of rewriting module: tmpk3qfyqfs.mf58e389dbf73bb9ed71a05adf7facee70f1ede2d88df041d3115a142b330b60b [assertion]
+          early skip of rewriting module: tmp70n188iy [assertion]
+          early skip of rewriting module: tmp70n188iy.mc3d2e28b26afc802d17ff2e57e8e9942a780014c29439784028b7c8fa3ab158a [assertion]
+          early skip of rewriting module: tmp__fuoffo [assertion]
+          early skip of rewriting module: tmp__fuoffo.mb63002e4cb3b72a8678617030d8b841c60d1b77d8eb3a2052c9a8bc46863bcd5 [assertion]
+          early skip of rewriting module: tmpzr0c8hcw [assertion]
+          early skip of rewriting module: tmpzr0c8hcw.me1b70abf2487746f11d44e03101358e42a5484bbe793d07b15d6a32a1e22c75d [assertion]
+          early skip of rewriting module: tmpy62advro [assertion]
+          early skip of rewriting module: tmpy62advro.md99f8854c398932e8a2429898f7f19479d1a51434a4afb7659b351bfeccc587b [assertion]
+          early skip of rewriting module: tmpeulb5rpn [assertion]
+          early skip of rewriting module: tmpeulb5rpn.m96d1c78b1c579d8fa189d3f3edb97194f8655a78d76b9c2d14a282fb8b79ce0d [assertion]
+          early skip of rewriting module: tmpoegcre9g [assertion]
+          early skip of rewriting module: tmpoegcre9g.m03cc3cdee46c6787a94521175277126c8d483d4e6ac5026e943ac127eec8e49a [assertion]
+          early skip of rewriting module: tmp389d99s9 [assertion]
+          early skip of rewriting module: tmp389d99s9.md30f43e3ac0abbc35c6ccc18f4ae4b8a4604228b9e2d3049ac95fe8733f7325c [assertion]
+          early skip of rewriting module: tmpsu4ix14x [assertion]
+          early skip of rewriting module: tmpsu4ix14x.mf123c29239f2cc768637ba735f1fcea3c3028bbbe424c6ca6ee868d52e672243 [assertion]
+          early skip of rewriting module: tmp8xkbcsx4 [assertion]
+          early skip of rewriting module: tmp8xkbcsx4.m24598f8fcf28d4ca443a101ff8e6ae6dee828e639eeef2fb7eb776c3945e3358 [assertion]
+          early skip of rewriting module: tmpmyqpzq0y [assertion]
+          early skip of rewriting module: tmpmyqpzq0y.m853343dadd2903f34502b8a9cc35f7ffbbba0c3fdc916b33d7c0682384d02042 [assertion]
+          early skip of rewriting module: tmp_y7_ixc3 [assertion]
+          early skip of rewriting module: tmp_y7_ixc3.mfa8abdd3a0269298c3d16b9d0359e8e570128883334f9be54318e37d183fb05e [assertion]
+          early skip of rewriting module: tmpof4k8rds [assertion]
+          early skip of rewriting module: tmpof4k8rds.mf0c597995cda5a5ddd6f2023fd9404c7f21824ed4f7f0d5318dee29bd7fd2b7c [assertion]
+          early skip of rewriting module: tmpdphpnpt7 [assertion]
+          early skip of rewriting module: tmpdphpnpt7.m3f5f78e9e2577950ef6c1a30bc972cdbe64920a6c678864745af4aea5e21168a [assertion]
+          early skip of rewriting module: tmpcsemz085 [assertion]
+          early skip of rewriting module: tmpcsemz085.m3b80f39e32d2b912d41dcb0e5955a54b20b58451df11c313e8cc7530d1410e34 [assertion]
+          early skip of rewriting module: tmpyd4b6bvg [assertion]
+          early skip of rewriting module: tmpyd4b6bvg.m3eb87040f21380867e950ca934a2ec81a620b8b71d54a616e607e9163333dfd4 [assertion]
+          early skip of rewriting module: tmpljdjsfd0 [assertion]
+          early skip of rewriting module: tmpljdjsfd0.m1651427a9bcb76feb07054e10bbdff37e24614da5ea981eed363c3fb4cc975ae [assertion]
+          early skip of rewriting module: tmpr6yfr65x [assertion]
+          early skip of rewriting module: tmpr6yfr65x.md8b2a4a66ea1200fa83a31e0f8b155595edd467ab57f9f2b3919eeb1e71d891d [assertion]
+          early skip of rewriting module: tmpscv9xgwl [assertion]
+          early skip of rewriting module: tmpscv9xgwl.me2e380d53316895e71d165d7dbdae09a4f633147fc97edcb5ad823c3ba58ee08 [assertion]
+          early skip of rewriting module: tmpuo9m2k27 [assertion]
+          early skip of rewriting module: tmpuo9m2k27.m885ff006a95d626dac547a7bdfdb471bbf058622ece2b4435e42316c4012ea56 [assertion]
+          early skip of rewriting module: tmpvrb4catg [assertion]
+          early skip of rewriting module: tmpvrb4catg.m4d04b211e3c4fe110aae217859e9d652ee6534698bdeac0610781b2b06f641c3 [assertion]
+          early skip of rewriting module: tmpfxg65n8j [assertion]
+          early skip of rewriting module: tmpfxg65n8j.m71b3b60e74b3450298c58da2d94429cffdd757f249e8808b21737e93c72598e1 [assertion]
+          early skip of rewriting module: tmpqe7bb_2t [assertion]
+          early skip of rewriting module: tmpqe7bb_2t.m4e11c75abd5d832893971be31278f89e4c74fd22cfbd5877fcc08e1a9f9e6620 [assertion]
+          early skip of rewriting module: tmpptb0z6_l [assertion]
+          early skip of rewriting module: tmpptb0z6_l.m835cbb3a3941e99e15bcaf26d5d3d6c83983a19e19761f6df9e8ee66b836c3c9 [assertion]
+          early skip of rewriting module: tmp2idcp5cc [assertion]
+          early skip of rewriting module: tmp2idcp5cc.m0199e584f4192256ca2db4564f4d88b760f1864c658444646de97d9bca5b2230 [assertion]
+          early skip of rewriting module: tmpumqpzym5 [assertion]
+          early skip of rewriting module: tmpumqpzym5.m2eb83677e8682bdf3e242b2623b890f54c8d8fb2ff39ea88fbc6177dc3cbcc25 [assertion]
+          early skip of rewriting module: tmpko4jcipg [assertion]
+          early skip of rewriting module: tmpko4jcipg.m3a7bf5eb418e27d280547b2a51376999e769e7fb411a315615b649d648c1fd5e [assertion]
+          early skip of rewriting module: tmppoqu34f5 [assertion]
+          early skip of rewriting module: tmppoqu34f5.m030b142f25a59a548aa749aee61cf9b2aed2730545537d0c2c4399e8c937a487 [assertion]
+          early skip of rewriting module: tmp2bnt3t7i [assertion]
+          early skip of rewriting module: tmp2bnt3t7i.ma69512c38ecaa2b2ce0373d282f67e0feee81b01d414da6b456b24a8a3df6270 [assertion]
+          early skip of rewriting module: tmponx2e471 [assertion]
+          early skip of rewriting module: tmponx2e471.mc379e1f3d345f3f56be88e8a2d5d601b81c420f109e2702aedf11e06917dd1dc [assertion]
+          early skip of rewriting module: tmpayruce9w [assertion]
+          early skip of rewriting module: tmpayruce9w.m43e2f10175c8cb3751d25cf685f5379783484e0f29388fc21a34a41edb6ae98d [assertion]
+          early skip of rewriting module: tmpg4w483bd [assertion]
+          early skip of rewriting module: tmpg4w483bd.meb7fffb987ade5ba120bcd46ac4bd45bdf8e42113ce69f35471bd216f69cd98b [assertion]
+          early skip of rewriting module: tmpbr7phi8m [assertion]
+          early skip of rewriting module: tmpbr7phi8m.m1af12115c0ec54b6e181bada6f9047e3c3ac55281f7b04809cf01b94a5ec6faa [assertion]
+          early skip of rewriting module: tmp55yuat8u [assertion]
+          early skip of rewriting module: tmp55yuat8u.m60a068f5e4bfe48344c4e636f49e249da0f0a2df673bf7ffb57b86690cf56e0d [assertion]
+          early skip of rewriting module: tmpsh_6kj89 [assertion]
+          early skip of rewriting module: tmpsh_6kj89.mabf5a3ba031e24c485aabbdd2baa83de9cb3ee97325afa0f743b818b7d5d1efb [assertion]
+          early skip of rewriting module: tmpwph9c3e4 [assertion]
+          early skip of rewriting module: tmpwph9c3e4.m24e469edadc396a0ba32b8765e268d726c312313cfccb4e8309fe444cadaaf7c [assertion]
+          early skip of rewriting module: tmpplw7gsoy [assertion]
+          early skip of rewriting module: tmpplw7gsoy.m91f05a0f17b2ee343f063822384985926c69b52352522030bea9d982e6bbf9d8 [assertion]
+          early skip of rewriting module: tmpw1ezqzaw [assertion]
+          early skip of rewriting module: tmpw1ezqzaw.m04320b3a00888f9dff315180c8a39826dda14c034dae8bbd012b1422c387a510 [assertion]
+          early skip of rewriting module: tmpnvctpsk1 [assertion]
+          early skip of rewriting module: tmpnvctpsk1.m4bcf9f79cb8f952fc3881559f66b4a67d402b631c8f121994fe02580a89345d3 [assertion]
+          early skip of rewriting module: tmp9c7i6bqr [assertion]
+          early skip of rewriting module: tmp9c7i6bqr.m9484afcfcdf982f602a7946782bdf8f2f12ac98efe29be52f657c45cbd8cd3a8 [assertion]
+          early skip of rewriting module: tmpu214cpel [assertion]
+          early skip of rewriting module: tmpu214cpel.mbf603e414396181d78ebdc7b7f3292b9a15629083c2e0aa4d31d71596ce9c1a4 [assertion]
+          early skip of rewriting module: multiprocessing.connection [assertion]
+          early skip of rewriting module: _multiprocessing [assertion]
+          early skip of rewriting module: _winapi [assertion]
+          early skip of rewriting module: multiprocessing.popen_fork [assertion]
+          early skip of rewriting module: multiprocessing.synchronize [assertion]
+          early skip of rewriting module: termios [assertion]
+        pytest_runtest_makereport [hook]
+            item: <Function test_normal_scalar>
+            call: <CallInfo when='call' exception: Sampling from random of a yields wrong shape>
+        finish pytest_runtest_makereport --> <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='call' outcome='failed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='call' outcome='failed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='call' outcome='failed'>
+              config: <_pytest.config.Config object at 0x1050b4710>
+          finish pytest_report_teststatus --> ('failed', 'F', 'FAILED') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_exception_interact [hook]
+            node: <Function test_normal_scalar>
+            call: <CallInfo when='call' exception: Sampling from random of a yields wrong shape>
+            report: <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='call' outcome='failed'>
+        finish pytest_exception_interact --> [] [hook]
+        pytest_runtest_teardown [hook]
+            item: <Function test_normal_scalar>
+            nextitem: None
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_Class__pytest_setup_method' scope='function' baseid='pymc3/tests/test_sampling.py::TestSamplePPC'>
+              request: <SubRequest '_Class__pytest_setup_method' for <Function test_normal_scalar>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='theano_config' scope='function' baseid='pymc3/tests'>
+              request: <SubRequest 'theano_config' for <Function test_normal_scalar>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='exception_verbosity' scope='function' baseid='pymc3/tests'>
+              request: <SubRequest 'exception_verbosity' for <Function test_normal_scalar>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+          pytest_fixture_post_finalizer [hook]
+              fixturedef: <FixtureDef argname='_Class__pytest_setup_class' scope='class' baseid='pymc3/tests/test_sampling.py::TestSamplePPC'>
+              request: <SubRequest '_Class__pytest_setup_class' for <Function test_normal_scalar>>
+          finish pytest_fixture_post_finalizer --> [] [hook]
+        finish pytest_runtest_teardown --> [] [hook]
+        pytest_runtest_makereport [hook]
+            item: <Function test_normal_scalar>
+            call: <CallInfo when='teardown' result: []>
+        finish pytest_runtest_makereport --> <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='teardown' outcome='passed'> [hook]
+        pytest_runtest_logreport [hook]
+            report: <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='teardown' outcome='passed'>
+          pytest_report_teststatus [hook]
+              report: <TestReport 'pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar' when='teardown' outcome='passed'>
+              config: <_pytest.config.Config object at 0x1050b4710>
+          finish pytest_report_teststatus --> ('', '', '') [hook]
+        finish pytest_runtest_logreport --> [] [hook]
+        pytest_runtest_logfinish [hook]
+            nodeid: pymc3/tests/test_sampling.py::TestSamplePPC::test_normal_scalar
+            location: ('pymc3/tests/test_sampling.py', 242, 'TestSamplePPC.test_normal_scalar')
+        finish pytest_runtest_logfinish --> [] [hook]
+        pytest_warning_captured [hook]
+            warning_message: {message : DeprecationWarning("Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working"), category : 'DeprecationWarning', filename : '/Users/rpg/.virtualenvs/pymc3/lib/python3.7/site-packages/theano/tensor/var.py', lineno : 468, line : None}
+            when: runtest
+            item: <Function test_normal_scalar>
+        finish pytest_warning_captured --> [] [hook]
+      finish pytest_runtest_protocol --> True [hook]
+    finish pytest_runtestloop --> True [hook]
+    pytest_sessionfinish [hook]
+        session: <Session pymc3 exitstatus=<ExitCode.TESTS_FAILED: 1> testsfailed=1 testscollected=1>
+        exitstatus: ExitCode.TESTS_FAILED
+      pytest_terminal_summary [hook]
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x128778210>
+          exitstatus: ExitCode.TESTS_FAILED
+          config: <_pytest.config.Config object at 0x1050b4710>
+      finish pytest_terminal_summary --> [] [hook]
+    finish pytest_sessionfinish --> [] [hook]
+    pytest_unconfigure [hook]
+        config: <_pytest.config.Config object at 0x1050b4710>
+    finish pytest_unconfigure --> [] [hook]
