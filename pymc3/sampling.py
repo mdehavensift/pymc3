@@ -632,7 +632,8 @@ def _sample(
                 trace = MultiTrace([strace])
                 if diverging and _pbar_data is not None:
                     _pbar_data["divergences"] += 1
-                    sampling.comment = _desc.format(**_pbar_data)
+                    if progressbar:
+                        sampling.comment = _desc.format(**_pbar_data)
     except KeyboardInterrupt:
         pass
     return strace
