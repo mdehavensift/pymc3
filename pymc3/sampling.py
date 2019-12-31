@@ -605,21 +605,20 @@ def _sample_population(
 
 
 def _sample(
-    chain,
-    progressbar,
+    chain: int,
+    progressbar: bool,
     random_seed,
     start,
-    draws=None,
+    draws: Optional[int]=None,
     step=None,
     trace=None,
     tune=None,
-    model=None,
+    model: Optional[Model]=None,
     **kwargs
 ):
     skip_first = kwargs.get("skip_first", 0)
 
     sampling = _iter_sample(draws, step, start, trace, chain, tune, model, random_seed)
-    _pbar_data = None
     _pbar_data = {"chain": chain, "divergences": 0}
     _desc = "Sampling chain {chain:d}, {divergences:,d} divergences"
     if progressbar:
@@ -630,7 +629,7 @@ def _sample(
         for it, (strace, diverging) in enumerate(sampling):
             if it >= skip_first:
                 trace = MultiTrace([strace])
-                if diverging and _pbar_data is not None:
+                if diverging:
                     _pbar_data["divergences"] += 1
                     if progressbar:
                         sampling.comment = _desc.format(**_pbar_data)
