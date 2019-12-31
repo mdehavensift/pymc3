@@ -575,7 +575,7 @@ class _PosteriorPredictiveSampler(AbstractContextManager):
                 if not input_vars:
                     assert input_vals == []  # AFAICT if there are now vars, there can't be vals
                     output = func(*input_vals)
-                    if hasattr(output, 'shape', None):
+                    if hasattr(output, 'shape'):
                         val = np.ndarray(output * samples)
                     else:
                         val = np.full(samples, output)
