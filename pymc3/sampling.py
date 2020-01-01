@@ -862,7 +862,7 @@ class PopulationStepper:
 
     @staticmethod
     def _run_slave(c, stepper_dumps, slave_end):
-        """Start a separate process to perform stepping of a chain.
+        """This method is started on a separate process to perform stepping of a chain.
 
         Parameters
         ----------
