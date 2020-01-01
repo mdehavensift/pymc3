@@ -1,7 +1,9 @@
-from typing import Dict, List, Optional, TYPE_CHECKING, cast, Union
+"""Functions for MCMC sampling."""
+
+from typing import Dict, List, Optional, TYPE_CHECKING, cast, Union, Any
 
 if TYPE_CHECKING:
-    from typing import Any, Tuple
+    from typing import Tuple
 from typing import Iterable as TIterable
 from collections.abc import Iterable
 from collections import defaultdict
@@ -71,7 +73,7 @@ _log = logging.getLogger("pymc3")
 
 
 def instantiate_steppers(model, steps, selected_steps, step_kwargs=None):
-    """Instantiates steppers assigned to the model variables.
+    """Instantiate steppers assigned to the model variables.
 
     This function is intended to be called automatically from ``sample()``, but
     may be called manually.
@@ -197,7 +199,9 @@ def _print_step_hierarchy(s, level=0):
     else:
         varnames = ", ".join(
             [
-                get_untransformed_name(v.name) if is_transformed_name(v.name) else v.name
+                get_untransformed_name(v.name)
+                if is_transformed_name(v.name)
+                else v.name
                 for v in s.vars
             ]
         )
@@ -222,7 +226,7 @@ def sample(
     compute_convergence_checks=True,
     **kwargs
 ):
-    """Draw samples from the posterior using the given step methods.
+    r"""Draw samples from the posterior using the given step methods.
 
     Multiple step methods are supported via compound step methods.
 
@@ -362,12 +366,14 @@ def sample(
     if "njobs" in kwargs:
         cores = kwargs["njobs"]
         warnings.warn(
-            "The njobs argument has been deprecated. Use cores instead.", DeprecationWarning
+            "The njobs argument has been deprecated. Use cores instead.",
+            DeprecationWarning,
         )
     if "nchains" in kwargs:
         chains = kwargs["nchains"]
         warnings.warn(
-            "The nchains argument has been deprecated. Use chains instead.", DeprecationWarning
+            "The nchains argument has been deprecated. Use chains instead.",
+            DeprecationWarning,
         )
     if chains is None:
         chains = max(2, cores)
@@ -386,7 +392,8 @@ def sample(
     if "chain" in kwargs:
         chain_idx = kwargs["chain"]
         warnings.warn(
-            "The chain argument has been deprecated. Use chain_idx instead.", DeprecationWarning
+            "The chain argument has been deprecated. Use chain_idx instead.",
+            DeprecationWarning,
         )
 
     if start is not None:
@@ -423,7 +430,10 @@ def sample(
                 start = start_
         except (AttributeError, NotImplementedError, tg.NullTypeGradError):
             # gradient computation failed
-            _log.info("Initializing NUTS failed. " "Falling back to elementwise auto-assignment.")
+            _log.info(
+                "Initializing NUTS failed. "
+                "Falling back to elementwise auto-assignment."
+            )
             _log.debug("Exception in init nuts", exec_info=True)
             step = assign_step_methods(model, step, step_kwargs=kwargs)
     else:
@@ -478,20 +488,27 @@ def sample(
                 raise
     if not parallel:
         if has_population_samplers:
-            has_demcmc = np.any([
-                isinstance(m, DEMetropolis)
-                for m in (step.methods if isinstance(step, CompoundStep) else [step])
-            ])
-            _log.info('Population sampling ({} chains)'.format(chains))
+            has_demcmc = np.any(
+                [
+                    isinstance(m, DEMetropolis)
+                    for m in (
+                        step.methods if isinstance(step, CompoundStep) else [step]
+                    )
+                ]
+            )
+            _log.info("Population sampling ({} chains)".format(chains))
             if has_demcmc and chains < 3:
                 raise ValueError(
-                    'DEMetropolis requires at least 3 chains. ' \
-                    'For this {}-dimensional model you should use ≥{} chains'.format(model.ndim, model.ndim + 1)
+                    "DEMetropolis requires at least 3 chains. "
+                    "For this {}-dimensional model you should use ≥{} chains".format(
+                        model.ndim, model.ndim + 1
+                    )
                 )
-            if has_demcmc and chains <= model.ndim:                
+            if has_demcmc and chains <= model.ndim:
                 warnings.warn(
-                    'DEMetropolis should be used with more chains than dimensions! '
-                    '(The model has {} dimensions.)'.format(model.ndim), UserWarning
+                    "DEMetropolis should be used with more chains than dimensions! "
+                    "(The model has {} dimensions.)".format(model.ndim),
+                    UserWarning,
                 )
             _print_step_hierarchy(step)
             trace = _sample_population(**sample_args, parallelize=cores > 1)
@@ -505,7 +522,9 @@ def sample(
 
     if compute_convergence_checks:
         if draws - tune < 100:
-            warnings.warn("The number of samples is too small to check convergence reliably.")
+            warnings.warn(
+                "The number of samples is too small to check convergence reliably."
+            )
         else:
             trace.report._run_convergence_checks(trace, model)
 
@@ -573,7 +592,7 @@ def _sample_population(
     step,
     tune,
     model,
-    progressbar: bool=True,
+    progressbar: bool = True,
     parallelize=False,
     **kwargs
 ):
@@ -601,65 +620,74 @@ def _sample_population(
 
 
 def _sample(
-    chain,
-    progressbar,
+    chain: int,
+    progressbar: bool,
     random_seed,
     start,
-    draws=None,
+    draws: Optional[int] = None,
     step=None,
     trace=None,
     tune=None,
-    model=None,
+    model: Optional[Model] = None,
     **kwargs
 ):
     skip_first = kwargs.get("skip_first", 0)
 
     sampling = _iter_sample(draws, step, start, trace, chain, tune, model, random_seed)
-    _pbar_data = None
     _pbar_data = {"chain": chain, "divergences": 0}
     _desc = "Sampling chain {chain:d}, {divergences:,d} divergences"
-    sampling = progress_bar(sampling, total=draws, display=progressbar)
-    sampling.comment = _desc.format(**_pbar_data)
+    if progressbar:
+        sampling = progress_bar(sampling, total=draws, display=progressbar)
+        sampling.comment = _desc.format(**_pbar_data)
     try:
         strace = None
         for it, (strace, diverging) in enumerate(sampling):
             if it >= skip_first:
                 trace = MultiTrace([strace])
-                if diverging and _pbar_data is not None:
+                if diverging:
                     _pbar_data["divergences"] += 1
-                    sampling.comment = _desc.format(**_pbar_data)
+                    if progressbar:
+                        sampling.comment = _desc.format(**_pbar_data)
     except KeyboardInterrupt:
         pass
     return strace
 
 
 def iter_sample(
-    draws, step, start=None, trace=None, chain=0, tune=None, model=None, random_seed=None
+    draws: int,
+    step,
+    start: Optional[Dict[Any, Any]] = None,
+    trace=None,
+    chain=0,
+    tune: Optional[int] = None,
+    model: Optional[Model] = None,
+    random_seed: Optional[Union[int, List[int]]] = None,
 ):
-    """Generator that returns a trace on each iteration using the given
-    step method.  Multiple step methods supported via compound step
-    method returns the amount of time taken.
+    """Generate a trace on each iteration using the given step method.
+
+    Multiple step methods ared supported via compound step methods.  Returns the
+    amount of time taken.
 
     Parameters
     ----------
-    draws : int
+    draws: int
         The number of samples to draw
-    step : function
+    step: function
         Step function
-    start : dict
+    start: dict
         Starting point in parameter space (or partial point). Defaults to trace.point(-1)) if
         there is a trace provided and model.test_point if not (defaults to empty dict)
-    trace : backend, list, or MultiTrace
+    trace: backend, list, or MultiTrace
         This should be a backend instance, a list of variables to track, or a MultiTrace object
         with past values. If a MultiTrace object is given, it must contain samples for the chain
         number ``chain``. If None or a list of variables, the NDArray backend is used.
-    chain : int
+    chain: int, optional
         Chain number used to store sample in backend. If ``cores`` is greater than one, chain numbers
         will start here.
-    tune : int
+    tune: int, optional
         Number of iterations to tune, if applicable (defaults to None)
-    model : Model (optional if in ``with`` context)
-    random_seed : int or list of ints
+    model: Model (optional if in ``with`` context)
+    random_seed: int or list of ints, optional
         A list is accepted if more if ``cores`` is greater than one.
 
     Examples
@@ -675,7 +703,14 @@ def iter_sample(
 
 
 def _iter_sample(
-    draws, step, start=None, trace=None, chain=0, tune=None, model=None, random_seed=None
+    draws,
+    step,
+    start=None,
+    trace=None,
+    chain=0,
+    tune=None,
+    model=None,
+    random_seed=None,
 ):
     model = modelcontext(model)
     draws = int(draws)
@@ -743,7 +778,7 @@ def _iter_sample(
 
 class PopulationStepper:
     def __init__(self, steppers, parallelize, progressbar=True):
-        """Tries to use multiprocessing to parallelize chains.
+        """Use multiprocessing to parallelize chains.
 
         Falls back to sequential evaluation if multiprocessing fails.
 
@@ -772,7 +807,11 @@ class PopulationStepper:
                 )
                 import multiprocessing
 
-                for c, stepper in enumerate(progress_bar(steppers)) if progressbar else enumerate(steppers):
+                for c, stepper in (
+                    enumerate(progress_bar(steppers))
+                    if progressbar
+                    else enumerate(steppers)
+                ):
                     slave_end, master_end = multiprocessing.Pipe()
                     stepper_dumps = pickle.dumps(stepper, protocol=4)
                     process = multiprocessing.Process(
@@ -803,7 +842,7 @@ class PopulationStepper:
         return super().__init__()
 
     def __enter__(self):
-        """Does nothing because processes are already started in __init__."""
+        """Do nothing: processes are already started in ``__init__``."""
         return
 
     def __exit__(self, exc_type, exc_val, exc_tb):
@@ -819,7 +858,7 @@ class PopulationStepper:
 
     @staticmethod
     def _run_slave(c, stepper_dumps, slave_end):
-        """Started on a separate process to perform stepping of a chain.
+        """This method is started on a separate process to perform stepping of a chain.
 
         Parameters
         ----------
@@ -838,7 +877,9 @@ class PopulationStepper:
             # but rather a CompoundStep. PopulationArrayStepShared.population
             # has to be updated, therefore we identify the substeppers first.
             population_steppers = []
-            for sm in stepper.methods if isinstance(stepper, CompoundStep) else [stepper]:
+            for sm in (
+                stepper.methods if isinstance(stepper, CompoundStep) else [stepper]
+            ):
                 if isinstance(sm, arraystep.PopulationArrayStepShared):
                     population_steppers.append(sm)
             while True:
@@ -861,7 +902,7 @@ class PopulationStepper:
         return
 
     def step(self, tune_stop, population):
-        """Steps the entire population of chains.
+        """Step the entire population of chains.
 
         Parameters
         ----------
@@ -891,10 +932,17 @@ class PopulationStepper:
 
 
 def _prepare_iter_population(
-    draws, chains, step, start, parallelize, tune=None, model=None, random_seed=None,
-        progressbar=True
+    draws,
+    chains,
+    step,
+    start,
+    parallelize,
+    tune=None,
+    model=None,
+    random_seed=None,
+    progressbar=True,
 ):
-    """Prepares a PopulationStepper and traces for population sampling.
+    """Prepare a PopulationStepper and traces for population sampling.
 
     Returns
     -------
@@ -961,7 +1009,7 @@ def _prepare_iter_population(
 
 
 def _iter_population(draws, tune, popstep, steppers, traces, points):
-    """Generator that iterates a PopulationStepper.
+    """Iterate a ``PopulationStepper``.
 
     Parameters
     ----------
@@ -1134,27 +1182,27 @@ def _choose_chains(traces, tune):
 
 
 def stop_tuning(step):
-    """ stop tuning the current step method """
-
+    """Stop tuning the current step method."""
     step.stop_tuning()
     return step
 
 
 class _DefaultTrace:
     """
-    This class is a utility for collecting a number of samples
-    into a dictionary. Name comes from its similarity to `defaultdict` --
+    Utility for collecting samples into a dictionary.
+
+    Name comes from its similarity to ``defaultdict``:
     entries are lazily created.
 
     Parameters
     ----------
-    samples : int
+    samples: int
         The number of samples that will be collected, per variable,
         into the trace.
 
     Attributes
     ----------
-    trace_dict : Dict[str, np.ndarray]
+    trace_dict: Dict[str, np.ndarray]
         A dictionary constituting a trace.  Should be extracted
         after a procedure has filled the `_DefaultTrace` using the
         `insert()` method
@@ -1163,7 +1211,7 @@ class _DefaultTrace:
     trace_dict = {}  # type: Dict[str, np.ndarray]
     _len = None  # type: int
 
-    def __init__(self, samples):
+    def __init__(self, samples: int):
         self._len = samples
         self.trace_dict = {}
 
@@ -1272,9 +1320,10 @@ def sample_posterior_predictive(trace,
             raise IncorrectArgumentsError("Should not specify both vars and var_names arguments.")
         else:
             vars = [model[x] for x in var_names]
-    elif vars is not None: # var_names is None, and vars is not.
-        warnings.warn("vars argument is deprecated in favor of var_names.",
-                      DeprecationWarning)
+    elif vars is not None:  # var_names is None, and vars is not.
+        warnings.warn(
+            "vars argument is deprecated in favor of var_names.", DeprecationWarning
+        )
     if vars is None:
         vars = model.observed_RVs
 
@@ -1283,9 +1332,8 @@ def sample_posterior_predictive(trace,
 
     indices = np.arange(samples)
 
-    
     if progressbar:
-        indices = tqdm(indices, total=samples)
+        indices = progress_bar(indices, total=samples, display=progressbar)
 
     ppc_trace_t = _DefaultTrace(samples)
     try:
@@ -1303,10 +1351,6 @@ def sample_posterior_predictive(trace,
     except KeyboardInterrupt:
         pass
 
-    finally:
-        if progressbar:
-            indices.close()
-
     ppc_trace = ppc_trace_t.trace_dict
     if keep_size:
         for k, ary in ppc_trace.items():
@@ -1316,16 +1360,19 @@ def sample_posterior_predictive(trace,
 
 
 def sample_ppc(*args, **kwargs):
-    """This method is deprecated.  Please use :func:`~sampling.sample_posterior_predictive`"""
+    """Deprecated: use :func:`~sampling.sample_posterior_predictive`."""
     message = "sample_ppc() is deprecated.  Please use sample_posterior_predictive()"
     warnings.warn(message, DeprecationWarning, stacklevel=2)
     return sample_posterior_predictive(*args, **kwargs)
 
 
 def sample_posterior_predictive_w(
-    traces, samples: Optional[int]=None, models: Optional[List[Model]]=None,
-        weights: Optional[ArrayLike]=None, random_seed: Optional[int]=None,
-        progressbar: bool=True
+    traces,
+    samples: Optional[int] = None,
+    models: Optional[List[Model]] = None,
+    weights: Optional[ArrayLike] = None,
+    random_seed: Optional[int] = None,
+    progressbar: bool = True,
 ):
     """Generate weighted posterior predictive samples from a list of models and
     a list of traces according to a set of weights.
@@ -1450,7 +1497,7 @@ def sample_posterior_predictive_w(
 
 
 def sample_ppc_w(*args, **kwargs):
-    """This method is deprecated.  Please use :func:`~sampling.sample_posterior_predictive_w`"""
+    """Deprecated: use :func:`~sampling.sample_posterior_predictive_w`."""
     message = "sample_ppc() is deprecated.  Please use sample_posterior_predictive_w()"
     warnings.warn(message, DeprecationWarning, stacklevel=2)
     return sample_posterior_predictive_w(*args, **kwargs)
@@ -1490,7 +1537,8 @@ def sample_prior_predictive(
     if vars is None and var_names is None:
         prior_pred_vars = model.observed_RVs
         prior_vars = (
-            get_default_varnames(model.unobserved_RVs, include_transformed=True) + model.potentials
+            get_default_varnames(model.unobserved_RVs, include_transformed=True)
+            + model.potentials
         )
         vars_ = [var.name for var in prior_vars + prior_pred_vars]
         vars = set(vars_)
@@ -1498,7 +1546,9 @@ def sample_prior_predictive(
         vars = var_names
         vars_ = vars
     elif vars is not None:
-        warnings.warn("vars argument is deprecated in favor of var_names.", DeprecationWarning)
+        warnings.warn(
+            "vars argument is deprecated in favor of var_names.", DeprecationWarning
+        )
         vars_ = vars
     else:
         raise ValueError("Cannot supply both vars and var_names arguments.")
@@ -1528,7 +1578,13 @@ def sample_prior_predictive(
 
 
 def init_nuts(
-    init="auto", chains=1, n_init=500000, model=None, random_seed=None, progressbar=True, **kwargs
+    init="auto",
+    chains=1,
+    n_init=500000,
+    model=None,
+    random_seed=None,
+    progressbar=True,
+    **kwargs
 ):
     """Set up the mass matrix initialization for NUTS.
 
@@ -1583,7 +1639,9 @@ def init_nuts(
     if set(vars) != set(model.vars):
         raise ValueError("Must use init_nuts on all variables of a model.")
     if not all_continuous(vars):
-        raise ValueError("init_nuts can only be used for models with only " "continuous variables.")
+        raise ValueError(
+            "init_nuts can only be used for models with only " "continuous variables."
+        )
 
     if not isinstance(init, str):
         raise TypeError("init must be a string.")
@@ -1637,7 +1695,9 @@ def init_nuts(
         mean = approx.bij.rmap(approx.mean.get_value())
         mean = model.dict_to_array(mean)
         weight = 50
-        potential = quadpotential.QuadPotentialDiagAdaptGrad(model.ndim, mean, cov, weight)
+        potential = quadpotential.QuadPotentialDiagAdaptGrad(
+            model.ndim, mean, cov, weight
+        )
     elif init == "advi+adapt_diag":
         approx = pm.fit(
             random_seed=random_seed,

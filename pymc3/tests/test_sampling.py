@@ -17,6 +17,8 @@ from pymc3.exceptions import IncorrectArgumentsError
 from scipy import stats
 import pytest
 
+# the following is necessary because pylint does not understand fixtures.
+# pylint: disable=unused-argument
 
 @pytest.mark.xfail(
     condition=(theano.config.floatX == "float32"), reason="Fails on float32"
